@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(images/web.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgba(39, 161, 245, 0.8),rgba(172, 242, 225, 0.8));
+}
+nav img{
+  width: 150px;
+}
+.nav__links{
+  flex: 1;
+  text-align: right;
+}
+.nav__links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav__links ul li a{
+  color: #0040ff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav__links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #00BFFF;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav__links ul li:hover::after{
+  width: 100%;
+}
+.text-box{
+  width: 90%;
+  color: #0040ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size: 62px;
+}
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 14px
+}
+@media(max-width: 700px){
+  .text-box h1{
+    font-size: 20px
+  }
+}
+.team-profile, .it-work, .feedback, .it-tech, .project-ideas{
+  width: 40%;
+  margin: 0 auto;
+}
+.team-profile h1, h2, h3, h4{
+  color: #0040ff;
+}
+.it-work h1, h2, h3, h4, h5, h6{
+  color: #0040ff;
+}
+.it-tech h1, h2, h3, h4, h5, h6{
+  color: #0040ff;
+}
+.project-ideas h1, h2, h3, h4, h5, h6{
+  color: #0040ff;
+}
+.personal-information p img{
+  width: 150px;
+  clip-path: circle();
+  float: left;
+  shape-outside: circle(50%);
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+.it-tech p img{
+  width: 300px;
+  height: 200px;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+.profile img{
+  width: 700px;
+}
+.project-ideas img{
+  width: 650px;
+}
+.project-ideas p img{
+  width: 500px;
+  height: 400px;
+  float: right;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+.title{
+  text-align: center;
+}
+.content-table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table thead tr{
+  background-color: rgba(172, 242, 225, 0.8);
+  color: #0040ff;
+  text-align: left;
+  font-weight: bold;
+}
+.content-table tr th{
+  color: #0040ff;
+}
+.content-table th,
+.content-table td{
+  padding: 12px 15px;
+}
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:nth-of-type(even){
+  background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+  border-bottom: 2px solid rgba(172, 242, 225, 0.8);
+}
+footer{
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to right,rgba(39, 161, 245, 0.8),rgba(172, 242, 225, 0.8));
+  color: #0040ff;
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{
+  flex-basis: 25%;
+  padding: 10px;
+}
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+.logo{
+  width: 80px;
+  margin-bottom: 30px;
+}
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+.email-id{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+ul li a{
+  text-decoration: none;
+  color:#0040ff;
+}
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+form.far{
+  font-size: 18px;
+  margin-right:10px;
+}
+form input{
+  width: 100%
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+form  button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+form button .fas{
+  font-size: 16px;
+  color: #ccc;
+}
+.social-icons .fab{
+  width: 40px;
+  height: 40px;
+  border-radius:50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  background: #4169E1;
+  margin-right: 15px;
+  cursor: pointer;
+}
+hr{
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+.copyright{
+  text-align: center;
+}
