@@ -63,13 +63,72 @@ Thirdly, an overachieving goal that we planned to do is to install into our webs
               Finally, the last goal that needed to be done is to create a personal list of movies to recommend for the user. As mentioned above, another function that we aim to achieve for our website is its ability to automatically create and recommend the user a list of movies that may fit into their liking. Therefore, we will need to implement an “Suggest” algorithm that can collect the user’s favorite genre and recommend the movies that both have good rating from other user, and with the same genre.
             </p><br>
             <h3>2. Plans and Progress</h3>
-            <p></p><br>
+            <p>
+              This project would have basic features of a film reviewing website, including sign up and sign in system, membership system, film and review filter, search engine, professional critics section and ticket scanner system. We began by creating our basic website design with HTML and CSS. We then hosted an online website using GitHub. The home page of the website has been complete and functions well. However, other features of the website are under prototype state. The database is planned to be built using database software such as MySQL.
+            </p><br>
+            <p>
+              In order to maintain the reputation of the website as well as avoiding spammed reviews and comments, we planned to limit the account registered by using phone number verification. Every phone number can only be used for one account only, and if users need to create a new one, the old account must be deleted. A problem arises that if the user processes multiple phone numbers, they can sign up as many new accounts as they desire. We are still finding a solution to the issue. Registering using citizen ID cards can seem to solve trouble; however, this method would require cooperating with the government, which would be impossible for our university project. Users without accounts could only read the reviews and comments rather than contributing to the website. In order to build a sign-up system, we would first have to create a database. Then, by connecting frontend and backend together using backend technology, all information received could be sent to the database. Moreover, coding for validation would be applied to check if the input data is correct or not. Finally, after users enter their login information, those would be verified with the ones in the database. Making phone number verification is also a problem that we must solve to complete the project. Online tutorial videos provide detailed steps on making phone number verification via Firebase, which we plan to make after finishing the website designing. Phone number verification is an important aspect of collecting customers’ data, which is crucial for the development of many projects.
+            </p><br>
+            <p>
+              Having an account is crucial to process with the membership system. This is a system to decide the reliability of an account through user’s voting. Every comment and review would have an up vote and a down vote button, where users can decide whether that review could be trusted or not. The difference between the numbers of up votes and down votes of a review as well as the number of reviews that are placed in the top review list of a film would be converted into credibility points. Credibility point is a system that would affect membership rank. The higher the membership rank is, the more privilege the user can experience. These benefits would include but not limited to a trial of an ad-free version, having reviews pinned on top of the page and displaying rank-exclusive badges. Users can check their progress of accumulative credibility points in the Personal Information interface as well as adjusting any information if needed. The membership system could use the same database as the sign-up system. All credibility points would be calculated as soon as possible. We would have to test whether our technology could do the calculation every hour, and then try to develop it so that credibility points could be updated right after adjustment happens.
+            </p><br>
+            <p>
+              A film filter plays a significant role in providing an appropriate film list for users. Each movie would be assigned tags with their corresponding genres as well as the age limitation. Users could choose the tags that they prefer while also excluding the genres that they dislike.
+            </p><br>
+            <p>
+              Aside from film filtering, a search system is used to find film by name. We wish to maximize the potential of the search engine. For title search, we would displace the search results based on the numbers of keywords that match the search in a correct order. After that, results with matched keywords but with different order would be shown. We planned to use engines such as Elastic Search to develop our search engine. The database would be updated frequently to ensure that new films and movies are added to our website on time. We would have to recruit a data specialist to set up the whole database. That person would also oversee reviewing user search history to ensure if our search engine is suitable for certain queries.
+            </p><br>
+            <p>
+              Many popular film review websites have their own film critic team. These critics could attract more users since people are most likely to believe in experts in the field. Critics’ reviews would be pinned on top of the comment section with special borders for highlighting purposes. Unfortunately, it is hard to find critics that are willing to help with our project. Our plan is to run the website to gain attention until we can contact and collaborate with some film critics. Using advanced CSS techniques for highlighting purposes, we would be able to distinguish the critic section from normal users.
+            </p><br>
+            <p>
+              In this project, we want to introduce the ticket scanner. Having people who write reviews without watching the movie could lead to misleading understanding about the film. Our objective is to build a built-in scanner that would scan cinema tickets. Accounts with proof of ticket scanning would have their reviews highlighted with watched approval, which would be awarded with more credibility points. After a movie is broadcasted online, the ticket scanner for that movie would be closed in order to stop the reusing of tickets. One main problem that we encounter is how to create the scan system as well as accessing the cinema database for customers’ information. Most cinema tickets nowadays would have their corresponding barcodes or QR codes. Using Android Studio, we could create a code scanner app, and then if available, we would access the database of the cinema to ensure the reliability of the ticket. For tickets without any code, a text scanner could be used to identify the information written. However, this method would require full access to the database of cinemas to retrieve data about the ticket or else the text scanner would serve nothing. Our ambition is to combine both text and code scanner into one scanner that could directly read the database to validate the ticket. It is not an easy target since they use difference engine and coding.
+            </p><br>
+            <p>
+              We pay attention to keeping a healthy environment for film lovers. Swear words are prohibited in every section of the website. Reviews and comments would go through a “profanity check” before being published. Swear words would automatically be omitted from the review using the If-in logic. However, if an account is found to have a negative attitude, which is swear words for multiple reviews and comments, it would receive a strike. The accumulation of three strikes would result in a complete ban. With the use of Python, Flask and GraphQL, we would manage to create a profanity filter that could scan through the comments and reviews for any swear words. We also need to create a separate database to store the profanity list as well as optimizing the filter in case people find cheating methods.
+            </p><br>
+            <p>
+              In order to keep our users away from being spoiled, we have decided to build a separate section for spoilers. Reviews and comments on non-spoiler page would go through the “spoiler check” just like with the “profanity check.”  Reviews that violate the rule would receive the same punishment as swear words. A spoiler database is created to store the keywords of each movie. The “spoiler check” would use the same system with the “profanity check”, but had the database replace with the spoiler database.
+            </p><br><br>
             <h3>3. Roles</h3>
             <p>Lead developer is in charge of website development and most part of the project. Especially, our project is about website. Tran Minh Nhat is suitable for such adequate experience in HTML and CSS. Pham Hoang Thien An is qualified for being a user interface designer for most of the ideas of the project is from him including how the website looks like. A faithful assistant and dedicating staff member have to be responsible for the group tasks when he/she is given one, and Le Tran Duc Huy is the best match of all. Although, he is not in charge of the main parts, he can be active and helpful for the rest of tasks that are given to him. Finally, the Documenter and material organizer of the group, Doan Thien Di. Her attendance in the group is the biggest help for us because without her, we can barely divide tasks and organize them properly. Our group owns her a favor for her being a decent documenter. </p><br><br>
             <h3>4. Scope and limit</h3>
-            <p></p><br>
+            <p>
+              Log in interface <br>
+
+Film filter <br>
+
+Film search engine <br>
+
+Film ticket scanner <br>
+
+Film critic section <br>
+
+Membership system (add credibility of users based on the like of the comment) <br>
+
+Profanity filter <br>
+
+Spoiler filter <br>
+There are multiple features that we want to include in this project. However, being first-year students with almost no experience, we decided to limit the features in this movie reviewing website project. Features that could be available would be the sign up and sign in interface, film filter, search engine and membership system. The film critic section requires cooperation with the film critic, which would be impossible for university projects that we have to put this feature aside. Another challenge is making the ticket scanner engine. This would require high level technology that is outside the scope of our project right now.
+            </p><br>
+            <p>
+              Basic web design <br>
+
+Lack of users <br>
+Being a university project, this website might not be designed as well as other well-known websites. Thus, it would be hard to attract much attention from online users. Without users, we could not continue to develop the website. The film reviews market is monopolized by popular websites such as Rotten Tomatoes, our project could not thrive under this domination. This project is created by an inexperienced team; thus, the website could not be as fancy as those with experts behind. Our project only has a basic web design, and we would recruit a more skillful web designer for a better interface.
+</p><br><br>
             <h3>5. Tools and Technologies</h3>
-            <p></p><br>
+            <p>GitHub – Members of our group all have experience using GitHub, especially Nhat who can create a website using GitHub. <br>
+
+MySQL – This is to create the databases that we require <br>
+
+Firebase and Android Studio – To create phone number verification and QR code scanner <br>
+
+PyCharm Community or Visual Studio Code – For Python coding <br>
+
+Flask and GraphQL – Applications to create the profanity check <br>
+
+Elastic Search – Tool to develop our search engine <br> </p><br><br>
             <h3>6. Testing</h3>
             <p>
               Since our group is not a professional at web programming, we are only thinking about website functionality testing and security testing. First, we do a links test since we need to confirm that any link that leads to our website works properly and there are no broken links or any link that leads to the wrong website or wrong page. Secondly, we test the performance of the website. We need to confirm that our login page works efficiently, there are no errors that occur when our customers want to create a login account or try to login in their account and we need to confirm that our customer can see other people review on our website. Thirdly, we will do the HTML and CSS test where we test if there are any HTML syntax errors and we need to verify that our site is available for the search machines. Finally, we will do the security testing, in this test we will simulate a malicious source attack to evaluate our website security and we need to making sure that there is no login ability if people enter wrong username or password and lastly, we also need to ensure that there are no restrict files are downloadable without appropriate access.
